@@ -1,0 +1,36 @@
+ require "byebug"
+ class Stack
+
+    attr_accessor :ivar 
+
+    def initialize ()
+        puts "hello"
+      @ivar = Array.new()
+    end
+
+    def push(el)
+
+        # debugger
+      @ivar.unshift(el)
+    end
+
+    def pop
+      # removes one element from the stack
+      @ivar.shift
+    end
+
+    def peek
+      # returns, but doesn't remove, the top element in the stack
+      return @ivar[0]
+    end
+  end
+
+
+  n = Stack.new
+  n.push(1)
+  n.push(2)
+  n.push(3)
+  puts n.peek
+  n.pop()
+  puts n.peek
+  puts n 

@@ -1,0 +1,27 @@
+ class Stack
+    def initialize ()
+      ivar = []
+    end
+
+    def push(el)
+      ivar.unshift(el)
+    end
+
+    def pop
+      # removes one element from the stack
+      ivar.shift(el)
+    end
+
+    def peek
+      # returns, but doesn't remove, the top element in the stack
+      return ivar[0]
+    end
+  end
+
+
+  n = Stack.new
+  n.push(1)
+  n.push(2)
+  n.push(3)
+  puts n.peek
+  puts n 
